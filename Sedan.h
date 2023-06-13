@@ -28,6 +28,13 @@ public:
     string to_string();
 };
 
+
+/**
+ * to_string convierte a atributos a string.
+ *
+ * concatena todos los valores de los atributos en un string para ser impreso
+ *
+ */
 string Sedan::to_string(){
     stringstream aux;
     aux << " Su vehículo personalizado tiene las siguientes caracterísitcas: " << " año: " << año << "\n " <<  " marca: " << marca << "\n " <<" potencia: " << potencia << "\n " <<" color: " << color << "\n " << " tipo de transmisión: " << tipo_transmision << "\n ";
@@ -51,5 +58,6 @@ void Sedan::setTipo_transmision(string tipo){
 }
     
 #endif /* Sedan_h */
+
 
 
