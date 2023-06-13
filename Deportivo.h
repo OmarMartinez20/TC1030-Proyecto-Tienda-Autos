@@ -29,8 +29,6 @@ public:
     string to_string();
 };
 
-
-
 /**
  * Getter para obtener la aceleracion máxima
  *
@@ -47,6 +45,14 @@ void Deportivo::setAceleracion(int aceleracion){
     aceleracion_max = aceleracion;
 }
 
+
+
+/**
+ * to_string convierte a atributos a string.
+ *
+ * concatena todos los valores de los atributos en un string para ser impreso
+ *
+ */
 string Deportivo::to_string(){
     stringstream aux;
     aux << " Su vehículo personalizado tiene las siguientes caracterísitcas: " << " año: " << año << "\n " << " marca: " << marca << "\n " << " potencia " << potencia << "\n " << " color " << color << "\n " << " aceleracion " << aceleracion_max << "\n ";
