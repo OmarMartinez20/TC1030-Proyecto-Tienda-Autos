@@ -6,17 +6,13 @@
 *  Created by José Omar Martínez on 23/05/23.
 */
 
-/*
- *  Clase Usuario para que los nuevos usuarios tengan acceso a la tienda
- *  Composición con la clase Carrito
- */
-
 #ifndef Vehi_culo_h
 #define Vehi_culo_h
 #include <iostream>//Para imprimir
 
 using namespace std;
 
+//Declaración de clase Vehículo que es abstracta
 class Vehiculo{
 protected:// Para que puedan heredar las clases hijas
     //Declaro los atributos
@@ -34,12 +30,11 @@ public:
     string getMarca();
     int getPotencia();
     string getColor();
-    float get_rating();
     void setAño(int anio);
     void setMarca(string mar);
     void setPotencia(int pot);
     void setColor(string col);
-    virtual string to_string() = 0;
+    virtual string to_string() = 0; //método abstracto que será sobreescrito
 };
 
 /**
@@ -50,10 +45,6 @@ Vehiculo::Vehiculo(int anio, string mar, int pot, string col){
     marca = mar;
     potencia = pot;
     color = col;
-}
-
-float Vehiculo::get_rating(){
-    return rating;
 }
 
 /**
@@ -112,11 +103,5 @@ void Vehiculo::setColor(string col){
     color = col;
 }
 
-/**
- * Imprime un mensaje
- */
-Vehiculo::Vehiculo(){
-    cout<<" personalizado un nuevo vehíuculo"<<endl;
-}
 
 #endif /* Vehiculo_h */
