@@ -30,9 +30,15 @@ public:
     string to_string();
 };
 
+/**
+ * to_string convierte a atributos a string.
+ *
+ * concatena todos los valores de los atributos en un string para ser impreso
+ */
+
 string Camioneta::to_string(){
     stringstream aux;
-    aux << " Su vehículo personalizado tiene las siguientes caracterísitcas: " << " año: " << año << "\n " << " marca: " << marca << "\n " << " potencia: " << potencia << "\n " << " color: " << color << "\n " << " tamaño: " << tamaño << "\n ";
+    aux << " Su vehículo personalizado tiene las siguientes caracterísitcas: " << " año: " << año << "\n " << " marca: " << marca << "\n " << " potencia: " << potencia << "\n " << " color: " << color << "\n " << " medida del vehículo a lo largo: " << tamaño << "\n ";
     return aux.str();
 }
 
@@ -54,4 +60,5 @@ void Camioneta::setTamanio(float tam){
 
 
 #endif /* Camioneta_h */
+
 
