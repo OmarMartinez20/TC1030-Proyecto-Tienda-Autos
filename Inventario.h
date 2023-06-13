@@ -1,9 +1,10 @@
-//
-//  Inventario.h
-//  Tienda_superautos
-//
-//  Created by José Omar Martínez on 05/06/23.
-//
+/*
+*  Proyecto Tienda_Superautos
+*  Inventario.h
+*  c++
+*  A01710263
+*  Created by José Omar Martínez on 23/05/23.
+*/
 
 #ifndef Inventario_h
 #define Inventario_h
@@ -13,13 +14,14 @@ using namespace std;
 
 class Inventario{
 private:
-    Vehiculo * vehiculos[1000];
+    Vehiculo * vehiculos[100];
     int vehiculos_creados;
     int indice;
 public:
     Inventario():indice(0){};
     void agrega_vehiculo(Vehiculo*);
     void imprime();
+    //Declaro función calculaPrecio que tiene sobrecargada
     int calculaPrecio(int, string, int, string, int);
     int calculaPrecio(int, string, int, string, string);
     int calculaPrecio(int, string, int, string, float);
@@ -32,7 +34,7 @@ int Inventario::calculaPrecio(int anio, string marca, int potencia, string color
     int precio = precio_base;
     if(anio==2021){
         precio = precio_base;
-        if(marca=="Mercedez"){
+        if(marca=="mercedez"){
             precio = precio_base;
             if(potencia==288){
                 precio = precio_base;
@@ -59,7 +61,7 @@ int Inventario::calculaPrecio(int anio, string marca, int potencia, string color
             }
         }
         
-        else if(marca=="Porshe"){
+        else if(marca=="porsche"){
             precio = precio + 200000;
             if(potencia==288){
                 precio = precio + 0;
@@ -88,7 +90,7 @@ int Inventario::calculaPrecio(int anio, string marca, int potencia, string color
     
     else if(anio==2022){
         precio = 900000 + 80000;
-        if(marca=="Mercedez"){
+        if(marca=="mercedez"){
             precio = precio+0;
             if(potencia==288){
                 precio = precio + 0;
@@ -113,7 +115,7 @@ int Inventario::calculaPrecio(int anio, string marca, int potencia, string color
                 }
             }
         }
-        else if(marca=="Porshe"){
+        else if(marca=="porsche"){
             precio = precio + 200000;
             if(potencia==288){
                 precio = precio + 0;
@@ -142,7 +144,7 @@ int Inventario::calculaPrecio(int anio, string marca, int potencia, string color
     
     else{
         precio = precio_base + 160000;
-        if(marca=="Mercedez"){
+        if(marca=="mercedez"){
             precio = precio + 0;
             if(potencia==288){
                 precio = precio + 0;
@@ -167,7 +169,7 @@ int Inventario::calculaPrecio(int anio, string marca, int potencia, string color
                 }
             }
         }
-        else if(marca=="Porshe"){
+        else if(marca=="porsche"){
             precio = precio + 200000;
             if(potencia==288){
                 precio = precio + 0;
@@ -202,7 +204,7 @@ int Inventario::calculaPrecio(int anio, string marca, int potencia, string color
     int precio = precio_base;
     if(anio==2021){
         precio = precio_base;
-        if(marca=="Toyota"){
+        if(marca=="toyota"){
             precio = precio_base;
             if(potencia==208){
                 precio = precio_base;
@@ -216,7 +218,7 @@ int Inventario::calculaPrecio(int anio, string marca, int potencia, string color
             }
         }
         
-        else if(marca=="BMW"){
+        else if(marca=="bmw"){
             precio = precio + 200000;
             if(potencia==208){
                 precio = precio + 0;
@@ -231,7 +233,7 @@ int Inventario::calculaPrecio(int anio, string marca, int potencia, string color
     
     else if(anio==2022){
         precio = 700000 + 80000;
-        if(marca=="Toyota"){
+        if(marca=="toyota"){
             precio = precio+0;
             if(potencia==208){
                 precio = precio + 0;
@@ -242,7 +244,7 @@ int Inventario::calculaPrecio(int anio, string marca, int potencia, string color
                 cout<<"precio final de su vehículo: "<<precio<<endl;
             }
         }
-        else if(marca=="BMW"){
+        else if(marca=="bmw"){
             precio = precio + 200000;
             if(potencia==208){
                 precio = precio + 0;
@@ -257,7 +259,7 @@ int Inventario::calculaPrecio(int anio, string marca, int potencia, string color
     
     else{
         precio = precio_base + 160000;
-        if(marca=="Toyota"){
+        if(marca=="toyota"){
             precio = precio + 0;
             if(potencia==208){
                 precio = precio + 0;
@@ -268,7 +270,7 @@ int Inventario::calculaPrecio(int anio, string marca, int potencia, string color
                 cout<<"precio final de su vehículo: "<<precio<<endl;
             }
         }
-        else if(marca=="BMW"){
+        else if(marca=="bmw"){
             precio = precio + 200000;
             if(potencia==208){
                 precio = precio + 0;
@@ -288,52 +290,52 @@ int Inventario::calculaPrecio(int anio, string marca, int potencia, string color
     int precio = precio_base;
     if(anio==2021){
         precio = precio_base;
-        if(marca=="Nissan"){
+        if(marca=="nissan"){
             precio = precio_base;
             if(potencia==174){
                 precio = precio_base;
-                if(transmision=="Standard"){
+                if(transmision=="standard"){
                     precio = precio + 0;
                     cout<<"precio final de su vehículo: "<<precio<<endl;
                 }
-                else if(transmision == "Automatico"){
+                else if(transmision == "automatico"){
                     precio = precio + 62000;
                     cout<<"precio final de su vehículo: "<<precio<<endl;
                 }
             }
             else if(potencia==223){
                 precio = precio + 100000;
-                if(transmision=="Standard"){
+                if(transmision=="standard"){
                     precio = precio + 0;
                     cout<<"precio final de su vehículo: "<<precio<<endl;
                 }
-                else if(transmision == "Automatico"){
+                else if(transmision == "automatico"){
                     precio = precio + 62000;
                     cout<<"precio final de su vehículo: "<<precio<<endl;
                 }
             }
         }
         
-        else if(marca=="Mazda"){
+        else if(marca=="mazda"){
             precio = precio + 200000;
             if(potencia==174){
                 precio = precio + 0;
-                if(transmision=="Standard"){
+                if(transmision=="standard"){
                     precio = precio + 0;
                     cout<<"precio final de su vehículo: "<<precio<<endl;
                 }
-                else if(transmision == "Automatico"){
+                else if(transmision == "automatico"){
                     precio = precio + 62000;
                     cout<<"precio final de su vehículo: "<<precio<<endl;
                 }
             }
             else if(potencia==223){
                 precio = precio + 100000;
-                if(transmision=="Standard"){
+                if(transmision=="standard"){
                     precio = precio + 0;
                     cout<<"precio final de su vehículo: "<<precio<<endl;
                 }
-                else if(transmision == "Automatico"){
+                else if(transmision == "automatico"){
                     precio = precio + 62000;
                     cout<<"precio final de su vehículo: "<<precio<<endl;
                 }
@@ -343,50 +345,50 @@ int Inventario::calculaPrecio(int anio, string marca, int potencia, string color
     
     else if(anio==2022){
         precio = 400000 + 80000;
-        if(marca=="Nissan"){
+        if(marca=="nissan"){
             precio = precio+0;
             if(potencia==174){
                 precio = precio + 0;
-                if(transmision=="Standard"){
+                if(transmision=="standard"){
                     precio = precio + 0;
                     cout<<"precio final de su vehículo: "<<precio<<endl;
                 }
-                else if(transmision == "Automatico"){
+                else if(transmision == "automatico"){
                     precio = precio + 62000;
                     cout<<"precio final de su vehículo: "<<precio<<endl;
                 }
             }
             else if(potencia==223){
-                precio = precio + 100000;if(transmision=="Standard"){
+                precio = precio + 100000;if(transmision=="standard"){
                     precio = precio + 0;
                     cout<<"precio final de su vehículo: "<<precio<<endl;
                 }
-                else if(transmision == "Automatico"){
+                else if(transmision == "automatico"){
                     precio = precio + 62000;
                     cout<<"precio final de su vehículo: "<<precio<<endl;
                 }
             }
         }
-        else if(marca=="Mazda"){
+        else if(marca=="mazda"){
             precio = precio + 200000;
             if(potencia==174){
                 precio = precio + 0;
-                if(transmision=="Standard"){
+                if(transmision=="standard"){
                     precio = precio + 0;
                     cout<<"precio final de su vehículo: "<<precio<<endl;
                 }
-                else if(transmision == "Automatico"){
+                else if(transmision == "automatico"){
                     precio = precio + 62000;
                     cout<<"precio final de su vehículo: "<<precio<<endl;
                 }
             }
             else if(potencia==223){
                 precio = precio + 100000;
-                if(transmision=="Standard"){
+                if(transmision=="standard"){
                     precio = precio + 0;
                     cout<<"precio final de su vehículo: "<<precio<<endl;
                 }
-                else if(transmision == "Automatico"){
+                else if(transmision == "automatico"){
                     precio = precio + 62000;
                     cout<<"precio final de su vehículo: "<<precio<<endl;
                 }
@@ -396,51 +398,51 @@ int Inventario::calculaPrecio(int anio, string marca, int potencia, string color
     
     else{
         precio = precio_base + 160000;
-        if(marca=="Nissan"){
+        if(marca=="nissan"){
             precio = precio + 0;
             if(potencia==174){
                 precio = precio + 0;
-                if(transmision=="Standard"){
+                if(transmision=="standard"){
                     precio = precio + 0;
                     cout<<"precio final de su vehículo: "<<precio<<endl;
                 }
-                else if(transmision == "Automatico"){
+                else if(transmision == "automatico"){
                     precio = precio + 62000;
                     cout<<"precio final de su vehículo: "<<precio<<endl;
                 }
             }
             else if(potencia==223){
                 precio = precio + 100000;
-                if(transmision=="Standard"){
+                if(transmision=="standard"){
                     precio = precio + 0;
                     cout<<"precio final de su vehículo: "<<precio<<endl;
                 }
-                else if(transmision == "Automatico"){
+                else if(transmision == "automatico"){
                     precio = precio + 62000;
                     cout<<"precio final de su vehículo: "<<precio<<endl;
                 }
             }
         }
-        else if(marca=="Mazda"){
+        else if(marca=="mazda"){
             precio = precio + 200000;
             if(potencia==174){
                 precio = precio + 0;
-                if(transmision=="Standard"){
+                if(transmision=="standard"){
                     precio = precio + 0;
                     cout<<"precio final de su vehículo: "<<precio<<endl;
                 }
-                else if(transmision == "Automatico"){
+                else if(transmision == "automatico"){
                     precio = precio + 62000;
                     cout<<"precio final de su vehículo: "<<precio<<endl;
                 }
             }
             else if(potencia==223){
                 precio = precio + 100000;
-                if(transmision=="Standard"){
+                if(transmision=="standard"){
                     precio = precio + 0;
                     cout<<"precio final de su vehículo: "<<precio<<endl;
                 }
-                else if(transmision == "Automatico"){
+                else if(transmision == "automatico"){
                     precio = precio + 62000;
                     cout<<"precio final de su vehículo: "<<precio<<endl;
                 }
@@ -457,7 +459,9 @@ void Inventario::imprime(){
 }
     
     
-
+/**
+ * Función que agrega un objeto de tipo Vehiculo al arreglo vehículos
+ */
 void Inventario::agrega_vehiculo(Vehiculo* veh){
         vehiculos[indice] = veh;
         indice ++;
