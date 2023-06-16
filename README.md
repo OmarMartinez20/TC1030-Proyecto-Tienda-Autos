@@ -13,6 +13,8 @@ CORRECCIONES Para este programa se realizaronn las siguientes correciones:
 1. Se identificó y redactó los casos en los que el programa fallaría.
 2. Se implementó la creación de objetos de manera dinámica.
 3. Se implementó el uso de clases abstractas para aplicar polimorfismo.
+
+
 Después de la revisión opcional final, se hicieron las siguientes correciones como lo sugirió el Profesor:
 1. Se creó una función para imprimir todos los objetos del arreglo de vehículos.
 2. Se agregaró documentación detallada para facilitar el entendimiento del programa.
