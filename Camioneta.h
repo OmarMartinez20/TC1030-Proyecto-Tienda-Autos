@@ -1,17 +1,18 @@
 /*
-*  Proyecto Tienda_superautos
-*  Camioneta.h
-*  c++
-*  A01710263
-*  Created by José Omar Martínez on 29/05/23.
-*/
+ *  Proyecto Tienda_superautos
+ *  Camioneta.h
+ *  c++
+ *  A01710263
+ *  Created by José Omar Martínez on 29/05/23.
+ *  Calse Camioneta hija de clase Vehiculo 
+ */
 
 
 #ifndef Camioneta_h
 #define Camioneta_h
 //Bibliotecas
 #include "Vehiculo.h"
-#include <iostream>
+#include <iostream> //Para imprimir
 #include <string>
 //Declaro la clase Camioneta que hereda de Vehiculo
 class Camioneta: public Vehiculo{
@@ -26,7 +27,6 @@ public:
     }
     
     float getTamanio();
-    void setTamanio(float tam);
     string to_string();
 };
 
@@ -34,11 +34,14 @@ public:
  * to_string convierte a atributos a string.
  *
  * concatena todos los valores de los atributos en un string para ser impreso
+ *
+ * param
+ * return string con los valores y texto concatenado
  */
 
 string Camioneta::to_string(){
     stringstream aux;
-    aux << " Su vehículo personalizado tiene las siguientes caracterísitcas: " << " año: " << año << "\n " << " marca: " << marca << "\n " << " potencia: " << potencia << "\n " << " color: " << color << "\n " << " medida del vehículo a lo largo: " << tamaño << "\n ";
+    aux << " Su vehículo personalizado tiene las siguientes caracterísitcas: " << "\n " << " año: " << año << "\n " << " marca: " << marca << "\n " << " potencia: " << potencia << "\n " << " color: " << color << "\n " << " medida del vehículo a lo largo: " << tamaño << "\n ";
     return aux.str();
 }
 
@@ -50,15 +53,5 @@ float Camioneta::getTamanio(){
     return tamaño;
 }
 
-/**
- * Setter para modificar el tamaño
- *
- */
-void Camioneta::setTamanio(float tam){
-    tamaño = tam;
-}
-
 
 #endif /* Camioneta_h */
-
-
