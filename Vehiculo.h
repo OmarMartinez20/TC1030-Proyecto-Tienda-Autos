@@ -1,20 +1,23 @@
 /*
-*  Proyecto Tienda_Superautos
-*  Vehículo.h
-*  c++
-*  A01710263
-*  Created by José Omar Martínez on 23/05/23.
-*/
+ *
+ *  Proyecto Tienda_Superautos
+ *  Vehículo.h
+ *  c++
+ *  A01710263
+ *  Created by José Omar Martínez on 23/05/23.
+ * Esta clase es abstracta y de ella heredan las clases
+ * Deportivo, Sedan y Camioneta.
+ */
 
-#ifndef Vehi_culo_h
-#define Vehi_culo_h
+#ifndef Vehiculo_h
+#define Vehiculo_h
 #include <iostream>//Para imprimir
 
 using namespace std;
 
 //Declaración de clase Vehículo que es abstracta
 class Vehiculo{
-protected:// Para que puedan heredar las clases hijas
+protected:// Protected para que puedan heredar las clases hijas
     //Declaro los atributos
     int año;
     string marca;
@@ -23,17 +26,13 @@ protected:// Para que puedan heredar las clases hijas
     float rating;
     
 public:
-    //Declaro métodos
-    Vehiculo();
+    //Declaro métodos que tendrá el objeto
+    Vehiculo(); //constructor por default
     Vehiculo(int, string, int, string);
     int getAño();
     string getMarca();
     int getPotencia();
     string getColor();
-    void setAño(int anio);
-    void setMarca(string mar);
-    void setPotencia(int pot);
-    void setColor(string col);
     virtual string to_string() = 0; //método abstracto que será sobreescrito
 };
 
@@ -73,34 +72,6 @@ int Vehiculo::getPotencia(){
  */
 string Vehiculo::getColor(){
     return color;
-}
-
-/**
- * Setter de año
- */
-void Vehiculo::setAño(int anio){
-    año = anio;
-}
-
-/**
- * Setter de marca
- */
-void Vehiculo::setMarca(string mar){
-    marca = mar;
-}
-
-/**
- * Setter de potenica
- */
-void Vehiculo::setPotencia(int pot){
-    potencia = pot;
-}
-
-/**
- * Setter de color
- */
-void Vehiculo::setColor(string col){
-    color = col;
 }
 
 
