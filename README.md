@@ -19,4 +19,4 @@ Después de la revisión opcional final, se hicieron las siguientes correciones 
 1. Se creó una función para imprimir todos los objetos del arreglo de vehículos.
 2. Se agregó documentación detallada para facilitar el entendimiento del programa.
 3. Se eliminaron los getters y setters que no se utilizaban en el programa.
-4. Se crearon las funciones de filtrar por año, marca y color para hacer uso correcto de los getters como fue sugerido por el Profesor.
+4. Se crearon las funciones de filtrar por año, marca y color para hacer uso correcto de los getters.
